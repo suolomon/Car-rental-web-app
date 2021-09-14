@@ -13,7 +13,7 @@ interface IcarProps extends Icar {
 
 const CarContainer = styled.div`
 width: 16.5em;  
-min-height: 22.2em;
+min-height: 20.2em;
 max-height: 25.2em;
 box-shadow: 0 1.3px 15px -2px rgba(0,0,0,0.4);
 ${tw`
@@ -136,9 +136,10 @@ export function Car(props: IcarProps) {
                 <CarName>{name}</CarName>
                 <PricesContainer>
                     <DailyPrice>Ugx.{dailyPrice}<SmallText>/day</SmallText></DailyPrice>
-                    <MonthlyPrice>{monthlyPrice}<SmallText>/month</SmallText></MonthlyPrice>
+                    <MonthlyPrice>Ugx.{monthlyPrice}<SmallText>/month</SmallText></MonthlyPrice>
                 </PricesContainer>
                 <Separator/>
+                <CarDetailsContainer>
                 <CarDetail>
                     <SmallIcon>
                         <FontAwesomeIcon icon={faTachometerAlt}/>
@@ -157,9 +158,8 @@ export function Car(props: IcarProps) {
                     </SmallIcon>
                     <CarInfo>{gas}</CarInfo>
                 </CarDetail>
-                <CarDetailsContainer>
-                    <RentButton text="Rent Now"/>
                 </CarDetailsContainer>
+                    <RentButton text="Rent Now"/>
         </CarContainer>
     )
 
