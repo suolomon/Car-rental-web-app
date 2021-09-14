@@ -50,7 +50,7 @@ mb-1
 `
 const PricesContainer = styled.div`
 ${tw`
-w-full  
+w-full 
 flex  
 justify-start   
 mt-3 
@@ -59,6 +59,7 @@ mt-3
 const SmallText = styled.p`
 color: inherit; 
 ${tw`
+inline-flex
 text-xs
 font-thin 
 `}
